@@ -1,0 +1,64 @@
+('type-0', 10, '^auth\\.info\\>\\ 172\\.27\\.[0-9]*\\.[0-9]*\\ sshd\\(pam\\_unix\\)\\[[0-9]*\\]\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ scope', ['info', 'sshd', 'for', 'pam_unix', 'auth', 'session', 'user', 'scope'])
+# auth.info> 172.27.208.20 sshd(pam_unix)[31965]: session opened for user scope by (uid=0)
+# auth.info> 172.27.208.20 sshd(pam_unix)[31964]: session opened for user scope by (uid=0)
+# auth.info> 172.27.208.20 sshd(pam_unix)[31968]: session opened for user scope by (uid=0)
+# auth.info> 172.27.205.43 sshd(pam_unix)[25109]: session opened for user scope by (uid=0)
+# auth.info> 172.27.208.201 sshd(pam_unix)[22857]: session opened for user scope by (uid=0)
+# auth.info> 172.27.208.201 sshd(pam_unix)[22857]: session closed for user scope
+# auth.info> 172.27.208.20 sshd(pam_unix)[31968]: session closed for user scope
+# auth.info> 172.27.205.43 sshd(pam_unix)[25109]: session closed for user scope
+# auth.info> 172.27.208.201 sshd(pam_unix)[22859]: session opened for user scope by (uid=0)
+# auth.info> 172.27.208.201 sshd(pam_unix)[22859]: session closed for user scope
+
+('type-1', 10, '^auth\\.info\\>\\ 172\\.27\\.[0-9]*\\.[0-9]*\\ sshd\\(pam\\_unix\\)\\[[0-9]*\\]\\:\\ session\\ [a-zA-Z_]*\\ for\\ user.*\\ ', ['info', 'sshd', 'for', 'pam_unix', 'auth', 'session', 'user'])
+# auth.info> 172.27.206.210 sshd(pam_unix)[32313]: session opened for user nagios by (uid=0)
+# auth.info> 172.27.206.210 sshd(pam_unix)[32313]: session closed for user nagios
+# auth.info> 172.27.208.20 sshd(pam_unix)[636]: session opened for user wworks by (uid=0)
+# auth.info> 172.27.208.20 sshd(pam_unix)[636]: session closed for user wworks
+# auth.info> 172.27.208.20 sshd(pam_unix)[768]: session opened for user wworks by (uid=0)
+# auth.info> 172.27.208.20 sshd(pam_unix)[768]: session closed for user wworks
+# auth.info> 172.27.208.20 sshd(pam_unix)[827]: session opened for user wworks by (uid=0)
+# auth.info> 172.27.208.20 sshd(pam_unix)[827]: session closed for user wworks
+# auth.info> 172.27.206.210 sshd(pam_unix)[4315]: session opened for user nagios by (uid=0)
+# auth.info> 172.27.206.210 sshd(pam_unix)[4315]: session closed for user nagios
+
+('type-2', 10, '^auth\\.err\\>\\ 172\\.27\\.206\\.[0-9]*\\ sshd\\[[0-9]*\\]\\:\\ \\[ID\\ 800047\\ auth\\.error\\]\\ error\\:\\ Could\\ not\\ load\\ host\\ key\\:\\ \\/usr\\/local\\/etc\\/ssh\\_host\\_rsa\\_key', ['load', 'ssh_host_rsa_key', 'usr', 'local', 'Could', 'auth', 'host', 'key', 'not', 'ID', 'sshd', 'err', 'etc', 'error'])
+# auth.err> 172.27.206.21 sshd[4357]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11452]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.21 sshd[10831]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11455]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11457]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.21 sshd[10833]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11460]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.21 sshd[10836]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11463]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+# auth.err> 172.27.206.22 sshd[11464]: [ID 800047 auth.error] error: Could not load host key: /usr/local/etc/ssh_host_rsa_key
+
+('type-3', 10, '^auth\\.info\\>\\ gy\\-asp\\-log01\\ sshd\\(pam\\_unix\\)\\[[0-9]*\\]\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ nagios', ['info', 'sshd', 'asp', 'nagios', 'for', 'user', 'pam_unix', 'gy', 'log01', 'session', 'auth'])
+# auth.info> gy-asp-log01 sshd(pam_unix)[1717]: session opened for user nagios by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[1717]: session closed for user nagios
+# auth.info> gy-asp-log01 sshd(pam_unix)[1737]: session opened for user nagios by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[1737]: session closed for user nagios
+# auth.info> gy-asp-log01 sshd(pam_unix)[1757]: session opened for user nagios by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[1757]: session closed for user nagios
+# auth.info> gy-asp-log01 sshd(pam_unix)[1777]: session opened for user nagios by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[1777]: session closed for user nagios
+# auth.info> gy-asp-log01 sshd(pam_unix)[1797]: session opened for user nagios by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[1797]: session closed for user nagios
+
+('type-4', 10, '^auth\\.info\\>\\ .*\\ [a-zA-Z_]*\\(pam\\_unix\\)\\[[0-9]*\\]\\:\\ session\\ [a-zA-Z_]*\\ for\\ user.*\\ ', ['info', 'for', 'pam_unix', 'auth', 'session', 'user'])
+# auth.info> gy-asp-log01 sshd(pam_unix)[2704]: session opened for user scope by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[2704]: session closed for user scope
+# auth.info> gy-asp-log01 sshd(pam_unix)[2724]: session opened for user scope by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[2724]: session closed for user scope
+# auth.info> gy-asp-log01 sshd(pam_unix)[3572]: session closed for user tzhang
+# auth.info> 172.27.206.210 su(pam_unix)[14159]: session opened for user rancid by tzhang(uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[23947]: session opened for user fengt by (uid=0)
+# auth.info> gy-asp-log01 su(pam_unix)[7634]: session closed for user root
+# auth.info> gy-asp-log01 sshd(pam_unix)[25440]: session opened for user fengt by (uid=0)
+# auth.info> gy-asp-log01 sshd(pam_unix)[26568]: session opened for user scope by (uid=0)
+
+('_failure_', 2, '^auth\\.notice\\>\\ 172\\.27\\.208\\.20\\ sshd\\(pam\\_unix\\)\\[[0-9]*\\]\\:\\ authentication\\ failure\\;\\ logname\\=\\ uid\\=0\\ euid\\=0\\ tty\\=ssh\\ ruser\\=\\ rhost\\=10\\.[0-9]*\\.[0-9]*\\.[0-9]*\\ \\ user\\=tzhang', ['tty', 'uid', 'rhost', 'user', 'pam_unix', 'authentication', 'notice', 'tzhang', 'auth', 'failure', 'euid', 'sshd', 'logname', 'ruser', 'ssh'])
+# auth.notice> 172.27.208.20 sshd(pam_unix)[29237]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.175.4.133  user=tzhang
+# auth.notice> 172.27.208.20 sshd(pam_unix)[8776]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.25.85.38  user=tzhang
+

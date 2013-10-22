@@ -1,0 +1,122 @@
+*******************************************************************************
+MEDIA SUMMARY FOR SERVER GROUP UNRESTRICTED_SHARING_GROUP ON Mon 14 Oct 2013 08:29:40 UTC
+*******************************************************************************
+
+ACTIVE   FULL  SUSPENDED  FROZEN  IMPORTED  WORM  BE_MEDIA  ENCRYPTED
+   13     11        0        1        0       0       0          0
+
+Number of NON-ACTIVE media that:
+       1 - are non-active and not written yet
+            V103L5 (FROZEN)
+       2 - will expire within 1 week
+            V144L5 expires 15/10/2013 10:22
+            V137L5 expires 20/10/2013 07:09
+       4 - will expire between 1 and 2 weeks
+            V111L5 expires 22/10/2013 03:18
+            V129L5 expires 22/10/2013 15:33
+            V130L5 expires 26/10/2013 10:16
+            V151L5 expires 25/10/2013 07:10
+       1 - will expire between 2 and 3 weeks
+            V136L5 expires 30/10/2013 07:10
+       4 - will expire between 3 weeks and 1 month
+            V152L5 expires 05/11/2013 07:12
+            V143L5 expires 10/11/2013 06:11
+            V141L5 expires 13/11/2013 07:14
+            V126L5 expires 14/11/2013 06:09
+
+Number of ACTIVE media that, as of now:
+       4 - will expire within 1 week
+            V105L5 expires 14/10/2013 22:02
+            V101L5 expires 14/10/2013 22:03
+            V133L5 expires 21/10/2013 06:05
+            V156L5 expires 16/10/2013 12:41
+       5 - will expire between 1 and 2 weeks
+            V124L5 expires 21/10/2013 22:20
+            V102L5 expires 22/10/2013 16:33
+            V155L5 expires 22/10/2013 05:55
+            V139L5 expires 26/10/2013 10:16
+            V158L5 expires 28/10/2013 06:48
+       1 - will expire between 2 and 3 weeks
+            V115L5 expires 03/11/2013 22:14
+       3 - will expire between 3 weeks and 1 month
+            V134L5 expires 13/11/2013 07:14
+            V123L5 expires 13/11/2013 09:03
+            V120L5 expires 14/11/2013 06:09
+
+Summary by retention level of ALL media
+     Level   # Media        Megabytes
+       1         6         10147282.0
+       2         7          5657165.6
+       3        12         13315022.3
+
+*******************************************************************************
+MEDIA SUMMARY FOR SERVER gi-rgs-dbr02 ON Mon 14 Oct 2013 08:29:40 UTC
+*******************************************************************************
+
+ACTIVE   FULL  SUSPENDED  FROZEN  IMPORTED  WORM  BE_MEDIA  ENCRYPTED
+    0      0        0        0        0       0       0          0
+
+*******************************************************************************
+MEDIA SUMMARY FOR SERVER gi-rgs-db05 ON Mon 14 Oct 2013 08:29:40 UTC
+*******************************************************************************
+
+ACTIVE   FULL  SUSPENDED  FROZEN  IMPORTED  WORM  BE_MEDIA  ENCRYPTED
+    0      0        0        0        0       0       0          0
+
+*******************************************************************************
+MEDIA SUMMARY FOR SERVER gi-rgs-db06 ON Mon 14 Oct 2013 08:29:40 UTC
+*******************************************************************************
+
+ACTIVE   FULL  SUSPENDED  FROZEN  IMPORTED  WORM  BE_MEDIA  ENCRYPTED
+    2     29        0        0        0       0       0          0
+
+Number of NON-ACTIVE media that:
+       7 - will expire within 1 week
+            V147L5 expires 16/10/2013 16:09
+            V118L5 expires 18/10/2013 03:28
+            V159L5 expires 18/10/2013 00:04
+            V107L5 expires 19/10/2013 03:36
+            V135L5 expires 20/10/2013 05:44
+            V157L5 expires 19/10/2013 05:14
+            V146L5 expires 20/10/2013 07:09
+      12 - will expire between 1 and 2 weeks
+            V100L5 expires 21/10/2013 22:11
+            V108L5 expires 24/10/2013 02:15
+            V122L5 expires 23/10/2013 00:50
+            V109L5 expires 26/10/2013 06:24
+            V153L5 expires 26/10/2013 04:36
+            V138L5 expires 24/10/2013 02:15
+            V121L5 expires 25/10/2013 05:40
+            V113L5 expires 25/10/2013 02:02
+            V114L5 expires 28/10/2013 00:58
+            V117L5 expires 27/10/2013 06:14
+            V127L5 expires 28/10/2013 07:19
+            V131L5 expires 28/10/2013 06:17
+      10 - will expire between 2 and 3 weeks
+            V125L5 expires 30/10/2013 04:29
+            V119L5 expires 30/10/2013 06:49
+            V116L5 expires 02/11/2013 00:42
+            V148L5 expires 31/10/2013 06:51
+            V140L5 expires 31/10/2013 08:05
+            V112L5 expires 03/11/2013 05:09
+            V145L5 expires 02/11/2013 00:43
+            V142L5 expires 03/11/2013 02:17
+            V110L5 expires 04/11/2013 05:50
+            V149L5 expires 04/11/2013 07:38
+
+Number of ACTIVE media that, as of now:
+       2 - will expire between 2 and 3 weeks
+            V128L5 expires 04/11/2013 07:54
+            V150L5 expires 04/11/2013 07:57
+
+Summary by retention level of ALL media
+     Level   # Media        Megabytes
+       2        31         92746694.4
+
+*******************************************************************************
+MEDIA SUMMARY FOR SERVER gi-bkup01 ON Mon 14 Oct 2013 08:29:40 UTC
+*******************************************************************************
+
+ACTIVE   FULL  SUSPENDED  FROZEN  IMPORTED  WORM  BE_MEDIA  ENCRYPTED
+    0      0        0        0        0       0       0          0
+

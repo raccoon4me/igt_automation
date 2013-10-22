@@ -1,0 +1,287 @@
+('type-1', 10, '^.*gi\\-rgs\\-[a-zA-Z_0-9]*\\ sshd\\[[0-9]*\\]\\:\\ Accepted\\ publickey\\ for\\ nagios\\ from\\ 192\\.168\\.190\\.15\\ port\\ [0-9]*\\ ssh2', ['sshd', 'rgs', 'from', 'Accepted', 'for', 'nagios', 'publickey', 'ssh2', 'port', 'gi'])
+# gi-rgs-web01 gi-rgs-web01 sshd[2656]: Accepted publickey for nagios from 192.168.190.15 port 43576 ssh2
+# gi-rgs-web02 gi-rgs-web02 sshd[15439]: Accepted publickey for nagios from 192.168.190.15 port 49065 ssh2
+# gi-rgs-rng03 sshd[11539]: Accepted publickey for nagios from 192.168.190.15 port 55695 ssh2
+# gi-rgs-rng04 sshd[2345]: Accepted publickey for nagios from 192.168.190.15 port 37387 ssh2
+# gi-rgs-rng04 sshd[2346]: Accepted publickey for nagios from 192.168.190.15 port 37388 ssh2
+# gi-rgs-ver02 sshd[28578]: Accepted publickey for nagios from 192.168.190.15 port 49709 ssh2
+# gi-rgs-ver01 sshd[30930]: Accepted publickey for nagios from 192.168.190.15 port 38181 ssh2
+# gi-rgs-rng03 sshd[11598]: Accepted publickey for nagios from 192.168.190.15 port 55713 ssh2
+# gi-rgs-app04 sshd[5299]: Accepted publickey for nagios from 192.168.190.15 port 55160 ssh2
+# gi-rgs-rng03 sshd[11601]: Accepted publickey for nagios from 192.168.190.15 port 55714 ssh2
+
+('type-2', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ pam\\_unix\\(sshd\\:session\\)\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ nagios', ['sshd', 'for', 'pam_unix', 'nagios', 'session', 'user'])
+# gi-rgs-web01 gi-rgs-web01 sshd[2656]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-rgs-web02 gi-rgs-web02 sshd[15439]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-rgs-ver02 sshd[28578]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-rgs-ver01 sshd[30930]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-rgs-web02 gi-rgs-web02 sshd[15439]: pam_unix(sshd:session): session closed for user nagios
+# gi-rgs-ver02 sshd[28578]: pam_unix(sshd:session): session closed for user nagios
+# gi-rgs-ver01 sshd[30930]: pam_unix(sshd:session): session closed for user nagios
+# gi-mon01 sshd[22468]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-rgs-web03 gi-rgs-web03 sshd[18331]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+# gi-log01 sshd[424]: pam_unix(sshd:session): session opened for user nagios by (uid=0)
+
+('type-3', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ Accepted\\ publickey\\ for\\ [a-zA-Z_]*\\ from\\ [0-9]*\\.[0-9]*\\.[0-9]*\\.[0-9]*\\ port\\ [0-9]*\\ ssh2', ['sshd', 'from', 'for', 'publickey', 'ssh2', 'Accepted', 'port'])
+# gi-mon01 sshd[22468]: Accepted publickey for nagios from 127.0.0.1 port 34371 ssh2
+# gi-log01 sshd[424]: Accepted publickey for nagios from 192.168.190.15 port 34951 ssh2
+# gi-rgs-app03 sshd[11879]: Accepted publickey for wworks from 192.168.190.35 port 39847 ssh2
+# gi-mon01 sshd[22811]: Accepted publickey for nagios from 192.168.190.15 port 37358 ssh2
+# gi-rgs-app03 sshd[11897]: Accepted publickey for wworks from 192.168.190.35 port 39848 ssh2
+# gi-ops02 sshd[10214]: Accepted publickey for nagios from 192.168.190.15 port 39594 ssh2
+# gi-rgs-app03 sshd[11915]: Accepted publickey for wworks from 192.168.190.35 port 39849 ssh2
+# gi-rgs-app03 sshd[11932]: Accepted publickey for wworks from 192.168.190.35 port 39850 ssh2
+# gi-rgs-app03 sshd[11948]: Accepted publickey for wworks from 192.168.190.35 port 39851 ssh2
+# gi-bkup01 sshd[1296]: Accepted publickey for nagios from 192.168.190.15 port 60895 ssh2
+
+('type-4', 10, '^.*\\ sudo\\:\\ \\ \\ nagios\\ \\:\\ TTY\\=unknown\\ \\;\\ PWD\\=\\/home\\/nagios\\ \\;\\ USER\\=[a-zA-Z_]*\\ \\;\\ COMMAND\\=.*\\/[a-zA-Z_]*\\/[a-zA-Z_]*\\/.*\\/[a-zA-Z_]*\\/', ['TTY', 'unknown', 'sudo', 'nagios', 'PWD', 'COMMAND', 'USER', 'home'])
+# gi-rgs-app04 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=wworks ; COMMAND=/wworks/rgs/weblogic/giprod/bin/run_weblogic.bash -d admin -s managed -a state
+# gi-rgs-rng02 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+# gi-rgs-app04 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=wworks ; COMMAND=/wworks/rgs/weblogic/giprod/bin/run_weblogic.bash -d platform -s managed -a state
+# gi-rgs-web02 gi-rgs-web02 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+# gi-log01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+# gi-ops01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+# gi-rgs-web01 gi-rgs-web01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+# gi-rgs-app01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=wworks ; COMMAND=/wworks/rgs/weblogic/giprod/bin/run_weblogic.bash -d admin -s admin -a state
+# gi-rgs-app01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=wworks ; COMMAND=/wworks/rgs/weblogic/giprod/bin/run_weblogic.bash -d platform -s managed -a state
+# gi-rgs-web03 gi-rgs-web03 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/usr/bin/md5sum /etc/hosts
+
+('type-6', 10, '^.*\\ sudo\\:\\ \\ \\ nagios\\ \\:\\ TTY\\=unknown\\ \\;\\ PWD\\=\\/home\\/nagios\\ \\;\\ USER\\=root\\ \\;\\ COMMAND\\=\\/[a-zA-Z_]*\\/.*\\ ', ['TTY', 'root', 'unknown', 'sudo', 'nagios', 'PWD', 'COMMAND', 'USER', 'home'])
+# gi-rgs-web02 gi-rgs-web02 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-bkup01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/sbin/multipath -ll
+# gi-log01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-app03 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-rgs-rng01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-inet02 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-inet02 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-rgs-web01 gi-rgs-web01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-rgs-app04 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+# gi-bkup01 sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/grep Oct  8 04:0 /var/log/secure
+
+('type-0', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ Connection\\ closed\\ by\\ 192\\.168\\.190\\.15', ['sshd', 'Connection', 'closed', 'by'])
+# gi-rgs-app04 sshd[5295]: Connection closed by 192.168.190.15
+# gi-rgs-app02 sshd[29511]: Connection closed by 192.168.190.15
+# gi-rgs-web01 gi-rgs-web01 sshd[6066]: Connection closed by 192.168.190.15
+# gi-ops02 sshd[12226]: Connection closed by 192.168.190.15
+# gi-log01 sshd[2673]: Connection closed by 192.168.190.15
+# gi-ops01 sshd[15439]: Connection closed by 192.168.190.15
+# gi-rgs-rng03 sshd[14069]: Connection closed by 192.168.190.15
+# gi-rgs-rng01 sshd[26213]: Connection closed by 192.168.190.15
+# gi-bkup01 sshd[3500]: Connection closed by 192.168.190.15
+# gi-dbs01 sshd[7720]: Connection closed by 192.168.190.15
+
+('type-7', 10, '^gi\\-rgs\\-[a-zA-Z_0-9]*\\ \\/usr\\/bin\\/sudo\\:\\ \\ \\ nagios\\ \\:\\ TTY\\=unknown\\ \\;\\ PWD\\=\\/home\\/nagios\\ \\;\\ USER\\=root\\ \\;\\ COMMAND\\=\\/bin\\/netstat\\ \\-tulpn', ['bin', 'TTY', 'rgs', 'netstat', 'root', 'unknown', 'sudo', 'tulpn', 'nagios', 'PWD', 'COMMAND', 'usr', 'home', 'gi', 'USER'])
+# gi-rgs-rng04 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-rng03 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-rng01 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-rng02 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-app01 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-app03 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-app02 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-app04 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-rng01 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+# gi-rgs-rng04 /usr/bin/sudo:   nagios : TTY=unknown ; PWD=/home/nagios ; USER=root ; COMMAND=/bin/netstat -tulpn
+
+('type-8', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ pam\\_unix\\(sshd\\:session\\)\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ wworks', ['sshd', 'for', 'pam_unix', 'session', 'user', 'wworks'])
+# gi-dbs01 sshd[7008]: pam_unix(sshd:session): session opened for user wworks by (uid=0)
+# gi-dbs01 sshd[7008]: pam_unix(sshd:session): session closed for user wworks
+# gi-log01 sshd[4091]: pam_unix(sshd:session): session opened for user wworks by (uid=0)
+# gi-log01 sshd[4099]: pam_unix(sshd:session): session opened for user wworks by (uid=0)
+# gi-log01 sshd[4091]: pam_unix(sshd:session): session closed for user wworks
+# gi-log01 sshd[4099]: pam_unix(sshd:session): session closed for user wworks
+# gi-rgs-web01 gi-rgs-web01 sshd[9100]: pam_unix(sshd:session): session opened for user wworks by (uid=0)
+# gi-rgs-web01 gi-rgs-web01 sshd[9100]: pam_unix(sshd:session): session closed for user wworks
+# gi-rgs-web01 gi-rgs-web01 sshd[9113]: pam_unix(sshd:session): session opened for user wworks by (uid=0)
+# gi-rgs-web01 gi-rgs-web01 sshd[9113]: pam_unix(sshd:session): session closed for user wworks
+
+('type-11', 10, '^gi\\-rgs\\-[a-zA-Z_0-9]*\\ gi\\-rgs\\-[a-zA-Z_0-9]*\\ sshd\\[[0-9]*\\]\\:\\ pam\\_unix\\(sshd\\:session\\)\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ scope', ['sshd', 'rgs', 'for', 'pam_unix', 'session', 'user', 'scope', 'gi'])
+# gi-rgs-web02 gi-rgs-web02 sshd[23947]: pam_unix(sshd:session): session opened for user scope by (uid=0)
+# gi-rgs-web02 gi-rgs-web02 sshd[23947]: pam_unix(sshd:session): session closed for user scope
+# gi-rgs-web03 gi-rgs-web03 sshd[26543]: pam_unix(sshd:session): session opened for user scope by (uid=0)
+# gi-rgs-web03 gi-rgs-web03 sshd[26543]: pam_unix(sshd:session): session closed for user scope
+# gi-rgs-web02 gi-rgs-web02 sshd[23963]: pam_unix(sshd:session): session closed for user scope
+# gi-rgs-web03 gi-rgs-web03 sshd[26811]: pam_unix(sshd:session): session opened for user scope by (uid=0)
+# gi-rgs-web03 gi-rgs-web03 sshd[26811]: pam_unix(sshd:session): session closed for user scope
+# gi-rgs-web02 gi-rgs-web02 sshd[23979]: pam_unix(sshd:session): session opened for user scope by (uid=0)
+# gi-rgs-web02 gi-rgs-web02 sshd[23979]: pam_unix(sshd:session): session closed for user scope
+# gi-rgs-web03 gi-rgs-web03 sshd[27017]: pam_unix(sshd:session): session opened for user scope by (uid=0)
+
+('type-5', 10, '^gi\\-[a-zA-Z_0-9]*\\ last\\ message\\ repeated\\ 2\\ times', ['last', 'times', 'repeated', 'message', 'gi'])
+# gi-dbs01 last message repeated 2 times
+# gi-bkup01 last message repeated 2 times
+# gi-dbs01 last message repeated 2 times
+# gi-bkup01 last message repeated 2 times
+# gi-dbs01 last message repeated 2 times
+# gi-bkup01 last message repeated 2 times
+# gi-dbs01 last message repeated 2 times
+# gi-bkup01 last message repeated 2 times
+# gi-bkup01 last message repeated 2 times
+# gi-dbs01 last message repeated 2 times
+
+('type-12', 10, '^gi\\-rgs\\-[a-zA-Z_0-9]*\\ gi\\-rgs\\-[a-zA-Z_0-9]*\\ sshd\\[[0-9]*\\]\\:\\ Received\\ disconnect\\ from\\ 192\\.168\\.188\\.21\\:\\ 11\\:\\ disconnected\\ by\\ user', ['sshd', 'rgs', 'disconnect', 'Received', 'by', 'user', 'from', 'gi', 'disconnected'])
+# gi-rgs-web02 gi-rgs-web02 sshd[23950]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web03 gi-rgs-web03 sshd[26623]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web02 gi-rgs-web02 sshd[23965]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web03 gi-rgs-web03 sshd[26951]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web02 gi-rgs-web02 sshd[23981]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web03 gi-rgs-web03 sshd[27021]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web02 gi-rgs-web02 sshd[23996]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web03 gi-rgs-web03 sshd[27038]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web02 gi-rgs-web02 sshd[1225]: Received disconnect from 192.168.188.21: 11: disconnected by user
+# gi-rgs-web03 gi-rgs-web03 sshd[4584]: Received disconnect from 192.168.188.21: 11: disconnected by user
+
+('type-13', 10, '^gi\\-bkup01\\ sshd\\[[0-9]*\\]\\:\\ pam\\_unix\\(sshd\\:session\\)\\:\\ session\\ [a-zA-Z_]*\\ for\\ user\\ fsbackup', ['sshd', 'for', 'pam_unix', 'bkup01', 'session', 'user', 'fsbackup', 'gi'])
+# gi-bkup01 sshd[29684]: pam_unix(sshd:session): session closed for user fsbackup
+# gi-bkup01 sshd[12557]: pam_unix(sshd:session): session opened for user fsbackup by (uid=0)
+# gi-bkup01 sshd[12557]: pam_unix(sshd:session): session closed for user fsbackup
+# gi-bkup01 sshd[20834]: pam_unix(sshd:session): session opened for user fsbackup by (uid=0)
+# gi-bkup01 sshd[20834]: pam_unix(sshd:session): session closed for user fsbackup
+# gi-bkup01 sshd[21371]: pam_unix(sshd:session): session closed for user fsbackup
+# gi-bkup01 sshd[21394]: pam_unix(sshd:session): session opened for user fsbackup by (uid=0)
+# gi-bkup01 sshd[21394]: pam_unix(sshd:session): session closed for user fsbackup
+# gi-bkup01 sshd[21417]: pam_unix(sshd:session): session opened for user fsbackup by (uid=0)
+# gi-bkup01 sshd[21417]: pam_unix(sshd:session): session closed for user fsbackup
+
+('type-9', 10, '^gi\\-mon01\\ sshd\\[[0-9]*\\]\\:\\ Connection\\ closed\\ by\\ UNKNOWN', ['mon01', 'UNKNOWN', 'sshd', 'Connection', 'closed', 'by', 'gi'])
+# gi-mon01 sshd[21786]: Connection closed by UNKNOWN
+# gi-mon01 sshd[12383]: Connection closed by UNKNOWN
+# gi-mon01 sshd[14637]: Connection closed by UNKNOWN
+# gi-mon01 sshd[7340]: Connection closed by UNKNOWN
+# gi-mon01 sshd[9314]: Connection closed by UNKNOWN
+# gi-mon01 sshd[334]: Connection closed by UNKNOWN
+# gi-mon01 sshd[4321]: Connection closed by UNKNOWN
+# gi-mon01 sshd[27429]: Connection closed by UNKNOWN
+# gi-mon01 sshd[29725]: Connection closed by UNKNOWN
+# gi-mon01 sshd[22088]: Connection closed by UNKNOWN
+
+('type-17', 10, '^gi\\-bkup01\\ sudo\\:.*\\ \\ \\ [a-zA-Z_]*\\ \\:\\ TTY\\=.*\\ \\;\\ PWD\\=\\/home\\/[a-zA-Z_]*\\ \\;\\ USER\\=root\\ \\;\\ COMMAND\\=.*\\/bin.*\\/.*\\ .*\\-', ['bin', 'TTY', 'root', 'sudo', 'bkup01', 'PWD', 'COMMAND', 'USER', 'home', 'gi'])
+# gi-bkup01 sudo:    fengt : TTY=pts/0 ; PWD=/home/fengt ; USER=root ; COMMAND=/bin/su -
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -tape -hoursago 72 -l
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-bkup01.giprod.int.igt.com_1381126145
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381214333
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381213508
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381212584
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381211757
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381210921
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381210109
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381209263
+
+('type-16', 10, '^gi\\-bkup01\\ .*\\:\\ pam\\_unix\\(.*\\:session\\)\\:\\ session\\ [a-zA-Z_]*\\ for\\ user.*\\ ', ['for', 'pam_unix', 'bkup01', 'session', 'user', 'gi'])
+# gi-bkup01 sshd[1665]: pam_unix(sshd:session): session opened for user fengt by (uid=0)
+# gi-bkup01 su: pam_unix(su-l:session): session opened for user root by fengt(uid=0)
+# gi-bkup01 sshd[29124]: pam_unix(sshd:session): session opened for user backup by (uid=0)
+# gi-bkup01 sshd[29124]: pam_unix(sshd:session): session closed for user backup
+# gi-bkup01 sshd[29341]: pam_unix(sshd:session): session opened for user backup by (uid=0)
+# gi-bkup01 sshd[29341]: pam_unix(sshd:session): session closed for user backup
+# gi-bkup01 sshd[29371]: pam_unix(sshd:session): session opened for user backup by (uid=0)
+# gi-bkup01 sshd[29371]: pam_unix(sshd:session): session closed for user backup
+# gi-bkup01 sshd[29401]: pam_unix(sshd:session): session opened for user backup by (uid=0)
+# gi-bkup01 sshd[29401]: pam_unix(sshd:session): session closed for user backup
+
+('type-18', 10, '^gi\\-bkup01\\ sudo\\:\\ \\ \\ \\ \\ root\\ \\:\\ TTY\\=unknown\\ \\;\\ PWD\\=\\/root\\ \\;\\ USER\\=root\\ \\;\\ COMMAND\\=\\/usr\\/openv\\/netbackup\\/bin\\/admincmd\\/bpimagelist.*\\ \\-.*\\ .*\\-', ['bin', 'TTY', 'openv', 'netbackup', 'sudo', 'bpimagelist', 'admincmd', 'bkup01', 'PWD', 'COMMAND', 'USER', 'unknown', 'root', 'gi', 'usr'])
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -tape -hoursago 72 -l
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-bkup01.giprod.int.igt.com_1381126145
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381216004
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381215169
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381214333
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381213508
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381212584
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381211757
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381210921
+# gi-bkup01 sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpimagelist -backupid gi-rgs-db06_1381210109
+
+('type-10', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ fatal\\:.*\\ [a-zA-Z_]*\\ failed\\:\\ Connection\\ reset\\ by\\ peer', ['reset', 'sshd', 'failed', 'Connection', 'peer', 'fatal', 'by'])
+# gi-rgs-web03 gi-rgs-web03 sshd[25296]: fatal: Write failed: Connection reset by peer
+# gi-rgs-web01 gi-rgs-web01 sshd[17228]: fatal: Write failed: Connection reset by peer
+# gi-mon01 sshd[7749]: fatal: Read from socket failed: Connection reset by peer
+# gi-rgs-app01 sshd[8275]: fatal: Write failed: Connection reset by peer
+# gi-rgs-ver01 sshd[31653]: fatal: Read from socket failed: Connection reset by peer
+# gi-rgs-app04 sshd[26480]: fatal: Write failed: Connection reset by peer
+# gi-rgs-app02 sshd[9132]: fatal: Write failed: Connection reset by peer
+# gi-rgs-app01 sshd[15922]: fatal: Write failed: Connection reset by peer
+# gi-rgs-app02 sshd[7456]: fatal: Write failed: Connection reset by peer
+# gi-rgs-web01 gi-rgs-web01 sshd[26371]: fatal: Write failed: Connection reset by peer
+
+('type-22', 10, '^gi\\-log01\\ sshd\\[[0-9]*\\]\\:\\ Did\\ not\\ receive\\ identification\\ string\\ from\\ 192\\.168\\.192\\.11', ['sshd', 'from', 'string', 'Did', 'receive', 'log01', 'identification', 'not', 'gi'])
+# gi-log01 sshd[17287]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[17294]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[17751]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[18343]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[18959]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[18966]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[22652]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[23568]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[23577]: Did not receive identification string from 192.168.192.11
+# gi-log01 sshd[23983]: Did not receive identification string from 192.168.192.11
+
+('type-21', 10, '^.*gi[a-zA-Z_0-9]*\\-[a-zA-Z_0-9]*\\ sshd[0-9]*\\[[0-9]*\\]\\:\\ pam\\_unix\\(sshd\\:session\\)\\:\\ session[a-zA-Z_]*\\ [a-zA-Z_]*\\ for\\ .*user', ['sshd', 'for', 'pam_unix', 'session', 'user', 'gi'])
+# gi-rgs-web01 gi-rgs-web01 sshd[16746]: pam_unix(sshd:session): session opened for user evansteen by (uid=0)
+# gi-rgs-web01 gi-rgs-web01 sshd[16746]: pam_unix(sshd:session): session closed for user evansteen
+# gi-log01 sshd[20270]: pam_unix(sshd:session): session opened for user tzhang by (uid=0)
+# gi-log01 sshd[30760]: pam_unix(sshd:session): session opened for user heslous by (uid=0)
+# gi-log01 sshd[30760]: pam_unix(sshd:session): session closed for user heslous
+# gi-log01 sshd[31118]: pam_unix(sshd:session): session opened for user heslous by (uid=0)
+# gi-log01 sshd[31118]: pam_unix(sshd:session): session closed for user heslous
+# gi-log01 sshd[31413]: pam_unix(sshd:session): session opened for user heslous by (uid=0)
+# gi-log01 sshd[31413]: pam_unix(sshd:session): session closed for user heslous
+# gi-log01 sshd[32045]: pam_unix(sshd:session): session opened for user heslous by (uid=0)
+
+('type-15', 10, '^.*\\ sshd\\[[0-9]*\\]\\:\\ Accepted\\ password\\ for\\ [a-zA-Z_]*\\ from\\ [0-9]*\\.[0-9]*\\.[0-9]*\\.[0-9]*\\ port\\ [0-9]*\\ ssh2', ['sshd', 'from', 'for', 'password', 'ssh2', 'Accepted', 'port'])
+# gi-bkup01 sshd[1665]: Accepted password for fengt from 10.175.4.139 port 59473 ssh2
+# gi-bkup01 sshd[23432]: Accepted password for fcswbackup from 192.168.191.61 port 41537 ssh2
+# gi-bkup01 sshd[23538]: Accepted password for fcswbackup from 192.168.191.44 port 37251 ssh2
+# gi-bkup01 sshd[23882]: Accepted password for fcswbackup from 192.168.191.54 port 48148 ssh2
+# gi-bkup01 sshd[25062]: Accepted password for fcswbackup from 192.168.191.63 port 49703 ssh2
+# gi-bkup01 sshd[25390]: Accepted password for fcswbackup from 192.168.191.64 port 41303 ssh2
+# gi-rgs-app01 sshd[2318]: Accepted password for acibinogins from 192.168.192.29 port 50532 ssh2
+# gi-log01 sshd[20270]: Accepted password for tzhang from 10.175.4.133 port 52326 ssh2
+# gi-log01 sshd[17276]: Accepted password for classan from 10.184.50.13 port 50631 ssh2
+# gi-rgs-web01 gi-rgs-web01 sshd[18243]: Accepted password for acibinogins from 192.168.192.29 port 56443 ssh2
+
+('_failure_', 10, '^.*\\:\\ pam\\_unix\\([a-zA-Z_]*\\:auth\\)\\:\\ authentication\\ failure\\;\\ logname\\=[a-zA-Z_]*\\ uid\\=0\\ euid\\=0\\ tty\\=.*\\ ruser\\=[a-zA-Z_]*\\ rhost\\=.*\\ \\ user\\=', ['tty', 'uid', 'user', 'pam_unix', 'auth', 'failure', 'authentication', 'logname', 'euid', 'ruser', 'rhost'])
+# gi-bkup01 sshd[1665]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.175.4.139  user=fengt
+# gi-bkup01 sudo: pam_unix(sudo:auth): authentication failure; logname=fengt uid=0 euid=0 tty=/dev/pts/0 ruser= rhost=  user=fengt
+# gi-rgs-web01 gi-rgs-web01 sudo: pam_unix(sudo:auth): authentication failure; logname=evansteen uid=0 euid=0 tty=/dev/pts/0 ruser=evansteen rhost=  user=evansteen
+# gi-log01 sshd[20270]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.175.4.133  user=tzhang
+# gi-log01 sshd[17276]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.184.50.13  user=classan
+# gi-rgs-web01 gi-rgs-web01 sshd[18243]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.192.29  user=acibinogins
+# gi-rgs-web01 gi-rgs-web01 sudo: pam_unix(sudo:auth): authentication failure; logname=acibinogins uid=0 euid=0 tty=/dev/pts/0 ruser=acibinogins rhost=  user=acibinogins
+# gi-log01 sudo: pam_unix(sudo:auth): authentication failure; logname=heslous uid=0 euid=0 tty=/dev/pts/1 ruser= rhost=  user=heslous
+# gi-ops01 sshd[13394]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.192.29  user=acibinogins
+# gi-ops01 sudo: pam_unix(sudo:auth): authentication failure; logname=acibinogins uid=0 euid=0 tty=/dev/pts/0 ruser= rhost=  user=acibinogins
+
+('type-20', 10, '^.*\\ sudo\\:.*\\ [a-zA-Z_]*\\ \\:\\ TTY\\=.*\\ \\;\\ PWD\\=\\/[a-zA-Z_]*\\/[a-zA-Z_]*\\ \\;\\ USER\\=root\\ \\;\\ COMMAND\\=.*\\/[a-zA-Z_]*\\/', ['TTY', 'root', 'sudo', 'PWD', 'COMMAND', 'USER'])
+# gi-rgs-app01 sudo: acibinogins : TTY=pts/2 ; PWD=/home/acibinogins ; USER=root ; COMMAND=/bin/su - wworks
+# gi-bkup01 sudo:   backup : TTY=unknown ; PWD=/home/backup ; USER=root ; COMMAND=/usr/openv/netbackup/bin/admincmd/bpmedialist
+# gi-rgs-web01 gi-rgs-web01 sudo: acibinogins : TTY=pts/0 ; PWD=/home/acibinogins ; USER=root ; COMMAND=/bin/su - wworks
+# gi-log01 sudo:  heslous : TTY=pts/1 ; PWD=/home/heslous ; USER=root ; COMMAND=/bin/cat /var/log/messages
+# gi-log01 sudo:  heslous : TTY=pts/1 ; PWD=/home/heslous ; USER=root ; COMMAND=/bin/cat /var/log/secure
+# gi-ops01 sudo: acibinogins : TTY=pts/0 ; PWD=/home/acibinogins ; USER=root ; COMMAND=/bin/su - wworks
+# gi-log01 sudo:  heslous : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/bin/cat secure
+# gi-log01 sudo:  heslous : TTY=pts/2 ; PWD=/home/heslous ; USER=root ; COMMAND=/var/log/messages /home/heslous/
+# gi-log01 sudo:  heslous : TTY=pts/2 ; PWD=/home/heslous ; USER=root ; COMMAND=/bin/cp /var/log/messages /home/heslous/
+# gi-log01 sudo:  heslous : TTY=pts/2 ; PWD=/home/heslous ; USER=root ; COMMAND=/bin/chown -R heslous messages
+
+('type-23', 10, '^gi\\-log01\\ sshd\\[[0-9]*\\]\\:\\ subsystem\\ request\\ for\\ sftp', ['subsystem', 'sshd', 'for', 'request', 'sftp', 'log01', 'gi'])
+# gi-log01 sshd[30907]: subsystem request for sftp
+# gi-log01 sshd[31122]: subsystem request for sftp
+# gi-log01 sshd[31417]: subsystem request for sftp
+# gi-log01 sshd[32049]: subsystem request for sftp
+# gi-log01 sshd[32405]: subsystem request for sftp
+# gi-log01 sshd[32767]: subsystem request for sftp
+# gi-log01 sshd[30229]: subsystem request for sftp
+# gi-log01 sshd[30958]: subsystem request for sftp
+# gi-log01 sshd[32075]: subsystem request for sftp
+# gi-log01 sshd[629]: subsystem request for sftp
+
+('type-24', 5, '^.*gi[a-zA-Z_0-9]*\\-.*\\ [a-zA-Z_]*\\:\\ pam\\_unix.*\\(.*\\:session\\)\\:\\ session\\ opened\\ for\\ user[a-zA-Z_]*\\ [a-zA-Z_]*\\ by[a-zA-Z_]*\\ [a-zA-Z_]*\\(uid\\=0', ['opened', 'for', 'pam_unix', 'session', 'user', 'by', 'gi', 'uid'])
+# gi-rgs-web01 gi-rgs-web01 sshd[18243]: pam_unix(sshd:session): session opened for user acibinogins by (uid=0)
+# gi-rgs-web01 gi-rgs-web01 su: pam_unix(su-l:session): session opened for user wworks by acibinogins(uid=0)
+# gi-ops01 su: pam_unix(su-l:session): session opened for user wworks by acibinogins(uid=0)
+# gi-log01 su: pam_unix(su-l:session): session opened for user wworks by acibinogins(uid=0)
+# gi-mon01 su: pam_unix(su-l:session): session opened for user wworks by acibinogins(uid=0)
+
+('type-19', 2, '^.*gi\\-rgs\\-[a-zA-Z_0-9]*\\ sshd\\[[0-9]*\\]\\:\\ Received\\ disconnect\\ from\\ 192\\.168\\.192\\.28\\:\\ 11\\:\\ disconnected\\ by\\ user', ['sshd', 'rgs', 'disconnect', 'disconnected', 'Received', 'user', 'from', 'by', 'gi'])
+# gi-rgs-app01 sshd[17792]: Received disconnect from 192.168.192.28: 11: disconnected by user
+# gi-rgs-web01 gi-rgs-web01 sshd[16748]: Received disconnect from 192.168.192.28: 11: disconnected by user
+

@@ -1,0 +1,20 @@
+('type-0', 10, '^local6\\.info\\>\\ 172\\.27\\.206\\.[0-9]*\\ sshd\\[[0-9]*\\]\\:\\ \\[ID\\ 800047\\ local6\\.info\\]\\ Accepted\\ publickey\\ for\\ [a-zA-Z_]*\\ from\\ 172\\.27\\.201\\.[0-9]*\\ port\\ [0-9]*\\ ssh2', ['info', 'sshd', 'from', 'for', 'port', 'publickey', 'Accepted', 'ssh2', 'local6', 'ID'])
+# local6.info> 172.27.206.20 sshd[2120]: [ID 800047 local6.info] Accepted publickey for wworks from 172.27.201.20 port 45650 ssh2
+# local6.info> 172.27.206.20 sshd[2164]: [ID 800047 local6.info] Accepted publickey for scope from 172.27.201.210 port 52487 ssh2
+# local6.info> 172.27.206.20 sshd[2335]: [ID 800047 local6.info] Accepted publickey for scope from 172.27.201.210 port 52562 ssh2
+# local6.info> 172.27.206.21 sshd[4357]: [ID 800047 local6.info] Accepted publickey for scope from 172.27.201.210 port 52572 ssh2
+# local6.info> 172.27.206.22 sshd[11452]: [ID 800047 local6.info] Accepted publickey for scope from 172.27.201.210 port 52597 ssh2
+# local6.info> 172.27.206.20 sshd[2340]: [ID 800047 local6.info] Accepted publickey for wworks from 172.27.201.20 port 45690 ssh2
+# local6.info> 172.27.206.22 sshd[11457]: [ID 800047 local6.info] Accepted publickey for nagios from 172.27.201.210 port 53046 ssh2
+# local6.info> 172.27.206.20 sshd[2404]: [ID 800047 local6.info] Accepted publickey for nagios from 172.27.201.210 port 53050 ssh2
+# local6.info> 172.27.206.21 sshd[10833]: [ID 800047 local6.info] Accepted publickey for nagios from 172.27.201.210 port 53071 ssh2
+# local6.info> 172.27.206.22 sshd[11460]: [ID 800047 local6.info] Accepted publickey for nagios from 172.27.201.210 port 53157 ssh2
+
+('_error_', 6, '^local6\\.err\\>\\ 172\\.27\\.206\\.[0-9]*\\ sshd\\[[0-9]*\\]\\:\\ \\[ID\\ 800047\\ local6\\.error\\]\\ error\\:.*\\ .*\\:.*\\ [a-zA-Z_]*\\ ', ['sshd', 'err', 'error', 'local6', 'ID'])
+# local6.err> 172.27.206.20 sshd[615]: [ID 800047 local6.error] error: accept: Software caused connection abort
+# local6.err> 172.27.206.21 sshd[593]: [ID 800047 local6.error] error: accept: Software caused connection abort
+# local6.err> 172.27.206.22 sshd[581]: [ID 800047 local6.error] error: accept: Software caused connection abort
+# local6.err> 172.27.206.20 sshd[7837]: [ID 800047 local6.error] error: setsockopt SO_KEEPALIVE: Invalid argument
+# local6.err> 172.27.206.21 sshd[593]: [ID 800047 local6.error] error: accept: Software caused connection abort
+# local6.err> 172.27.206.22 sshd[13286]: [ID 800047 local6.error] error: setsockopt SO_KEEPALIVE: Invalid argument
+
