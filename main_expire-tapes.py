@@ -17,6 +17,7 @@ import time
 import logging
 import Colorer
 import requests
+import re
 
 
 sys.stdout.flush()
@@ -88,6 +89,67 @@ def writeToConfigFile(oneENV, oneSection, oneSubSection, onePATH):
     with open(ConfFile, 'wb') as configfile:
         config.write(configfile)
 
+class filterlogs(object):
+    #declare my member variables
+    now = datetime.now()
+    dateNow = datetime.strptime('%s %s %s' % (now.month,now.day,now.year),'%m %d %Y')
+    def __init__(self,my_ouput):
+        self.my_ouput = my_ouput
+
+    def initdateFutur(self,days):
+        self.dateFutur = self.dateNow + timedelta(days=int(days))
+
+    def general_filtering(self):
+        x= []
+        for line in self.my_ouput.split('\n'):
+            #we clean the line
+            cleanLine = line.strip()
+            #as long as we have a line which is not empty, let's print them
+            if cleanLine:
+                #let's clean each line
+                if ('Executing' not in cleanLine) and ('PASS' not in cleanLine) and ('Done' not in cleanLine) and ('Disconnecting' not in cleanLine):
+                    #use regular expression to clean the weird caracters such as x1b etc...
+                    cleanLine = re.sub('\x1b.*?m', '', cleanLine)
+                    #z = " ".join(cleanLine.split()).split(' ')[0]," ".join(cleanLine.split()).split(' ')[1]
+                    #for each splitted line we found, we add it to x
+                    x.append(cleanLine)
+        return x
+
+    def goingdeeper(self,x):
+        data = {}
+        i = 0
+        for line in x:
+            tapes =  " ".join(line.split()).split(' ')[0]
+            dates = " ".join(line.split()).split(' ')[2]
+
+            dates = datetime.strptime('%s %s %s' % (dates.split('/')[0],dates.split('/')[1],dates.split('/')[2]),'%m %d %Y')
+            #on compare
+            if dates.date() >= self.dateNow.date() and dates.date() <=  self.dateFutur.date():
+                #on met tout ca dans un dict
+                data[tapes] = dates.strftime('%b %d %Y')
+                #we increment i for knowing the number of availables tapes in total
+                i = i+1
+        d = OrderedDict(sorted(data.items(), key=itemgetter(1)))
+        if i > 0:
+            logging.info("From %s to %s, %s tape(s) are candidates for being expired" % (self.dateNow.strftime('%d %b %Y'),
+                                                                                         self.dateFutur.strftime('%d %b %Y'),i))
+            return d
+        else:
+            logging.info("There is no candidate tape to be expired for this range of time")
+            return False
+
+class filterexpireoutput(filterlogs):
+
+    def __init__(self):
+
+
+
+'''
+class filtermd5ouput(filterlogs):
+
+'''
+
+
 def main_process(opts):
 
     isfileexist(opts.environement + '.cfg')
@@ -104,8 +166,23 @@ def main_process(opts):
     i = 0
     p = subprocess.check_output('fab -f deploy.py -c ' + opts.environement +'.cfg -H '+
                         extractIPFromCfg(opts.environement,'ips',opts.servers)+' expiretapes',stderr=subprocess.STDOUT,shell=True)
+    new_output = filterlogs(p)
+    new_output.initdateFutur(opts.days)
+    ww = new_output.goingdeeper(new_output.general_filtering())
+    if ww != False:
+        for key, value in ww.iteritems():
+            logging.info("Tape %s as its expired the %s" % (key, value))
+
+
+    '''
+    new_output.general_filtering()
+    if new_output.goingdeeper() != False:
+        for key, value in new_output.goingdeeper().iteritems():
+            logging.info("Tape %s as its expired the %s" % (key, value))
+    '''
     #we read the subprocess stdout
     #for each real line
+    '''
     for line in p.split('\n'):
         #si la line contient expires
         if ('expires' in line):
@@ -121,6 +198,7 @@ def main_process(opts):
                 #we increment i for knowing the number of availables tapes in total
                 i = i+1
 
+
     #we order the dictionnary on the values keys
     d = OrderedDict(sorted(data.items(), key=itemgetter(1)))
     if i > 0:
@@ -130,6 +208,7 @@ def main_process(opts):
         #very nice for accessing all the option of a dict, key and value
     for key, value in d.iteritems():
         logging.info("Tape %s as its expired the %s" % (key, value))
+    '''
 
     writeToConfigFile(opts.environement, 'login', 'my_password', '')
     sys.exit(0)

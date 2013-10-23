@@ -14,7 +14,7 @@ my_point = Point3D(3,4,5)
 print my_point
 
 
-'''
+
 class Car(object):
     condition = "new"
     def __init__(self, model, color, mpg):
